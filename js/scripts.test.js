@@ -19,13 +19,13 @@ Pizza.prototype.price = function() {
 
 function orderDetailsCheese(pizzaToDisplay) {
 let cheese = $("#cheese").val();
-if (cheese === 0) {
+if (cheese === "0") {
   pizzaToDisplay.T1 = "no cheese";
   }
-else if (cheese === 1) {
+else if (cheese === "1") {
   pizzaToDisplay.T1 = "Feta";
   }
-else if (cheese === 2) {
+else if (cheese === "2") {
   pizzaToDisplay.T1 = "Cheddar";
   }
 else pizzaToDisplay.T1 = "Kraft";
@@ -83,7 +83,7 @@ function orderDetailsSize(pizzaToDisplay) {
     pizzaToDisplay.size = "no size";
     }
   else if (size === 2) {
-    pizzaToDisplay.size = "Eigth Inch";
+    pizzaToDisplay.size = "Eight Inch";
     }
   else if (size === 3) {
     pizzaToDisplay.size = "Ten Inch";
@@ -92,19 +92,32 @@ function orderDetailsSize(pizzaToDisplay) {
   return pizzaToDisplay.size;
 }
 
-function ShowOrder(pizza)
-  let orderPrintOut = $("#orderDetails");
-  let orderList = "";
-  pizza.forEach(function(propety) {
-    orderList += "<li>" + orderDetailsSize(propety) + "</li>" + "<li>" + orderDetailsCheese(propety) + "</li>" + "<li>" + orderDetailsMeats(propety) + "</li>" + "<li>" + orderDetailsVeggies(propety) + "</li>" + "<li>" + orderDetailsOther(propety) + "</li>"
-  console.log(orderList);
-  })
+function ShowOrder(shownPizza) {
+  let whichSize = orderDetailsSize(shownPizza);
+  let whichCheese = orderDetailsCheese(shownPizza);
+  let whichMeats = orderDetailsMeats(shownPizza);
+  let whichVeggies = orderDetailsVeggies(shownPizza);
+  let whichOther =  orderDetailsOther(shownPizza);
+  let destination = $("ul#orderDetails");
+  let orderPrintOut = "<li>" + whichSize + "</li>" + "<li>" + whichCheese + "</li>" + "<li>" + whichMeats + "</li>" + "<li>" + whichVeggies + "</li>" + "<li>" + whichOther + "</li>";
+  destination.html(orderPrintOut);
+  return orderPrintOut;
+};
 
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
     let pizza = new Pizza(parseInt($("#size").val()), parseInt($("#cheese").val()), parseInt($("#meats").val()), parseInt($("#veggies").val()), parseInt($("#other").val()));
     $("#result").html("<h2>" + pizza.price() + "</h2>");
-    $("#orderDetails")
+  });
+  let pizza = new Pizza(parseInt($("#size").val()), parseInt($("#cheese").val()), parseInt($("#meats").val()), parseInt($("#veggies").val()), parseInt($("#other").val()));
+  $("button#details").click(function(){
+    ShowOrder(pizza);
+    console.log('clicked')
   });
 });
+
+
+
+
+// let pizza = new Pizza(2, 0, 1, 2, 3);

@@ -46,13 +46,19 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 |------|--------|  
 |Should take number values of pizza object properties, and sum the topping numbers then multiply by the size number|  input: pizzaObject(2, 3, 1, 2, 2).toOutput(16)|  
 
-**Describe: function orderDetails()**  
+**Describe: function orderDetails...()**  
 | Test | Expect |  
 |------|--------|  
 |Should take the number value from the user input and display replace the number with a string matching the user choices.
-|pizzaObject = {1, 2, 3}.toOutPut(pizza = {feta, pepperoni, olive})
+|pizzaObject = {1, 2, 3}.toOutPut(pizza = {feta, 2, 3})
 
-
+**Describe: function ShowOrder(pizza)
+| Test | Expect |  
+|------|--------|  
+|Should show the converted values from orderDetails function on html page as an unordered list.
+|pizzaObject = {feta, onion, pepperoni}.toOutPut(*feta
+*onion
+*pepperoni)
 
 ## Known Bugs
 * 
