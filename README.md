@@ -49,8 +49,9 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 **Describe: function orderDetails()**  
 | Test | Expect |  
 |------|--------|  
-|Should take the input from the form and display the 'name' tag of each selected 'option' element.
-|user selects(feta, pepperoni, olive).toOutPut(feta, pepperoni, olive) 
+|Should take the number value from the user input and display replace the number with a string matching the user choices.
+|pizzaObject = {1, 2, 3}.toOutPut(pizza = {feta, pepperoni, olive})
+
 
 
 ## Known Bugs
