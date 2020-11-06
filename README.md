@@ -49,8 +49,8 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 **Describe: function orderDetails()**  
 | Test | Expect |  
 |------|--------|  
-|Should convert object size property from number, back to string|  
-input: pizzaObject(2, 3, 2, 1, 1).toDisplay(eight inch, 3, 2, 1, 1)|  
+|Should take the input from the form and display the 'name' tag of each selected 'option' element.
+|user selects(feta, pepperoni, olive).toOutPut(feta, pepperoni, olive) 
 
 
 ## Known Bugs
