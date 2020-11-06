@@ -74,7 +74,7 @@ function orderDetailsOther(pizzaToDisplay) {
     pizzaToDisplay.T4 = "Mac n' Cheese";
     }
   else pizzaToDisplay.T4 = "Oreos";
-  return pizzaToDisplay;
+  return pizzaToDisplay.T4;
 } 
 
 function orderDetailsSize(pizzaToDisplay) {
@@ -92,11 +92,19 @@ function orderDetailsSize(pizzaToDisplay) {
   return pizzaToDisplay.size;
 }
 
+function ShowOrder(pizza)
+  let orderPrintOut = $("#orderDetails");
+  let orderList = "";
+  pizza.forEach(function(propety) {
+    orderList += "<li>" + orderDetailsSize(propety) + "</li>" + "<li>" + orderDetailsCheese(propety) + "</li>" + "<li>" + orderDetailsMeats(propety) + "</li>" + "<li>" + orderDetailsVeggies(propety) + "</li>" + "<li>" + orderDetailsOther(propety) + "</li>"
+  console.log(orderList);
+  })
+
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
     let pizza = new Pizza(parseInt($("#size").val()), parseInt($("#cheese").val()), parseInt($("#meats").val()), parseInt($("#veggies").val()), parseInt($("#other").val()));
     $("#result").html("<h2>" + pizza.price() + "</h2>");
-    $("#orderDetails").html("<p>" + orderDetails(pizza) + "</p>");
+    $("#orderDetails")
   });
 });
