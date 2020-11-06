@@ -1,6 +1,13 @@
 body {
+  background-color: darkorange;
+  background-image: radial-gradient(circle, rgb(228, 139, 30) 80%, rgba(192, 1, 1, 0.657));
+}
+
+div.container {
   background-color: aquamarine;
-  background-image: radial-gradient(circle, rgb(250, 181, 69)30%, rgb(155, 84, 51) 31%, rgb(195, 61, 8) 100%);
+  background-image: url("../img/pizzamonster.jpg");
+  background-size: cover;
+  border-radius: 40%;
 }
 
 .container {
@@ -8,7 +15,12 @@ body {
 }
 
 div.row {
-  border: 70px solid rgba(200, 130, 83, 0.534);
-  background-image: linear-gradient(to left, rgba(164, 180, 24, 0.301), rgba(55, 112, 112, 0.335));
-  border-radius: 10px;
+  border: 50px solid rgba(164, 175, 190, 0.274);
+  background-color: rgba(121, 75, 75, 0.794);
+  border-radius: 10%;
+}
+
+img {
+  width: 100px;
+  height: auto;
 }

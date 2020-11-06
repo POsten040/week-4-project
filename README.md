@@ -6,7 +6,7 @@
 
 ## Description
 
-This webpage will give users a choice of pizza sizes and toppings to choose from. After they submit their order they will be shown a price for the pizza. 
+This webpage will give users a choice of pizza sizes and toppings to choose from. After they submit their order they will be shown a price for the pizza. They can also view the details of their order, and start the order over with the click of a button.
 
 ## Installation Requirements
 
@@ -61,7 +61,7 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 *pepperoni)
 
 ## Known Bugs
-* 
+* If an order is placed and the detaisl are shown, placing another order without hitting the reset button is possible however the new order will not be shown until the "show order details" button is clicked. Old order details will remain visible on the page.
 
 ## Support and contact details
 
