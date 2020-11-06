@@ -39,7 +39,12 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 **Describe: function Pizza ()**
 | Test | Expect |
 |------|--------|
-|User input from form fields is passed to consctructor to build pizza object| Input:(12in, olives, redsauce).toObject(Pizza= {12in, olives, redsauce)|
+|User input from form fields is converted to numbers and passed to consctructor to build pizza object| Input:(12in, olives, redsauce).toObject(Pizza= {1, 2, 2)  
+<br><br>
+**Describe: Pizza.prototype.price**
+|Test| Expect|
+|------|------|
+|Should take number values of pizza object properties, and sum the topping numbers then multiply by the size number|input: pizzaObject(2, 3, 1, 2, 2).toOutput(16)
 
 
 ## Known Bugs
