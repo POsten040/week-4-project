@@ -10,7 +10,7 @@ function Pizza (size, T1, T2, T3, T4) {
 
 Pizza.prototype.price = function() {
   let cost = this.size * (this.T1 + this.T2 + this.T3 + this.T4);
-  return cost; 
+  return (cost + "" + "bucks"); 
 }
 
 // UI Logic
