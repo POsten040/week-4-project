@@ -14,11 +14,18 @@ Pizza.prototype.price = function() {
 }
 
 // UI Logic
+
+function orderDetails(pizzaToDisplay) {
+  let orderDetails = $("ul#orderDetails");
+
+}
+
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
     let pizza = new Pizza(parseInt($("#size").val()), parseInt($("#cheese").val()), parseInt($("#meats").val()), parseInt($("#veggies").val()), parseInt($("#other").val()));
-    console.log(pizza.price());
+    $("#result").html(pizza.());
     $("#result").html("<h2>" + pizza.price() + "</h2>");
+    
   });
 });
