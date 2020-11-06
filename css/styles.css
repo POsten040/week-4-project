@@ -1,0 +1,7 @@
+h1 {
+  transform: scale(1);
+}
+
+h1:active {
+  transform: scale(.90);
+}
