@@ -34,13 +34,13 @@ return pizzaToDisplay.T1
 
 function orderDetailsMeats(pizzaToDisplay) {
   let meats = $("#meats").val();
-  if (meats === 0) {
+  if (meats === "0") {
     pizzaToDisplay.T2 = "no meats";
     }
-  else if (meats === 1) {
+  else if (meats === "1") {
     pizzaToDisplay.T2 = "Pepperoni";
     }
-  else if (meats === 2) {
+  else if (meats === "2") {
     pizzaToDisplay.T2 = "Ham";
     }
   else pizzaToDisplay.T2 = "Bacon";
@@ -49,13 +49,13 @@ function orderDetailsMeats(pizzaToDisplay) {
 
 function orderDetailsVeggies(pizzaToDisplay) {
   let veggies = $("#veggies").val();
-  if (veggies === 0) {
+  if (veggies === "0") {
     pizzaToDisplay.T3 = "no veggies";
     }
-  else if (veggies === 1) {
+  else if (veggies === "1") {
     pizzaToDisplay.T3 = "Olives";
     }
-  else if (veggies === 2) {
+  else if (veggies === "2") {
     pizzaToDisplay.T3 = "Onions";
     }
   else pizzaToDisplay.T3 = "Mushrooms";
@@ -64,13 +64,13 @@ function orderDetailsVeggies(pizzaToDisplay) {
 
 function orderDetailsOther(pizzaToDisplay) {
   let other = $("#other").val();
-  if (other === 0) {
+  if (other === "0") {
     pizzaToDisplay.T4 = "no other";
     }
-  else if (other === 1) {
+  else if (other === "1") {
     pizzaToDisplay.T4 = "Truffle Oil";
     }
-  else if (other === 2) {
+  else if (other === "2") {
     pizzaToDisplay.T4 = "Mac n' Cheese";
     }
   else pizzaToDisplay.T4 = "Oreos";
@@ -79,13 +79,13 @@ function orderDetailsOther(pizzaToDisplay) {
 
 function orderDetailsSize(pizzaToDisplay) {
   let size = $("#size").val();
-  if (size === 1) {
+  if (size === "1") {
     pizzaToDisplay.size = "no size";
     }
-  else if (size === 2) {
+  else if (size === "2") {
     pizzaToDisplay.size = "Eight Inch";
     }
-  else if (size === 3) {
+  else if (size === "3") {
     pizzaToDisplay.size = "Ten Inch";
     }
   else pizzaToDisplay.size = "Twelve Inch";
@@ -113,7 +113,10 @@ $(document).ready(function() {
   let pizza = new Pizza(parseInt($("#size").val()), parseInt($("#cheese").val()), parseInt($("#meats").val()), parseInt($("#veggies").val()), parseInt($("#other").val()));
   $("button#details").click(function(){
     ShowOrder(pizza);
-    console.log('clicked')
+  });
+  $("button#start-over").click(function(){
+    $("ul#orderDetails").text("");
+    $("#result").text("");
   });
 });
 
