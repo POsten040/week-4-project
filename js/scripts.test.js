@@ -212,7 +212,7 @@ $(document).ready(function() {
   });
   $("button#random").click(function() {
     let randomPizza1 = randomPizza();
-    $("#random-result").html("<h2>" + randomPizza1.price() + "</h2>");
+    $("#result").html("<h2>" + randomPizza1.price() + "</h2>");
     ShowRandom(randomPizza1);
   });
 });

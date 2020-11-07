@@ -62,6 +62,7 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 
 ## Known Bugs
 * If an order is placed and the detaisl are shown, placing another order without hitting the reset button is possible however the new order will not be shown until the "show order details" button is clicked. Old order details will remain visible on the page.
+* If a random order is generated, clicking "show my pizza details" causes the pizza details to pull from the form.
 
 ## Support and contact details
 
