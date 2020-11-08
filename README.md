@@ -46,13 +46,13 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 |------|--------|  
 |Should take number values of pizza object properties, and sum the topping numbers then multiply by the size number|  input: pizzaObject(2, 3, 1, 2, 2).toOutput(16)|  
 
-**Describe: function orderDetails...()**  
+**Describe: function orderDetails...()** 
 | Test | Expect |  
 |------|--------|  
 |Should take the number value from the user input and display replace the number with a string matching the user choices.
 |pizzaObject = {1, 2, 3}.toOutPut(pizza = {feta, 2, 3})
 
-**Describe: function ShowOrder(pizza)
+**Describe: function ShowOrder(pizza)**
 | Test | Expect |  
 |------|--------|  
 |Should show the converted values from orderDetails function on html page as an unordered list.
@@ -61,8 +61,13 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
 *pepperoni)
 
 ## Known Bugs
-* If an order is placed and the detaisl are shown, placing another order without hitting the reset button is possible however the new order will not be shown until the "show order details" button is clicked. Old order details will remain visible on the page.
-* If a random order is generated, clicking "show my pizza details" causes the pizza details to pull from the form.
+
+
+| Bugs  | Date Fixed |
+|---|---|
+|   If an order is placed and the detaisl are shown, placing another order without hitting the reset button is possible however the new order details will not be shown until the "show order details" button is clicked. Old order details will remain visible on the page.  |   |
+| If a random order is generated, clicking "show my pizza details" causes the pizza details to pull from the form.  | 11/6/20  |
+|  If pizza details button is clicked without making any selections on the form, pressing the random pizza button displays detaisl but shows 0 for price  |   |
 
 ## Support and contact details
 
