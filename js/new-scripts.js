@@ -1,28 +1,25 @@
-function Pizza (size, T1, T2, T3, T4) {
+function Pizza (size) {
   this.size = size;
-  this.T1 = T1;
-  this.T2 = T2;
-  this.T3 = T3;
-  this.T4 = T4;
+  this.toppings;
 }
 
 Pizza.prototype.price = function() {
-  let cost = 2 * (this.size * (this.T1 + this.T2 + this.T3 + this.T4));
+  let cost = 2 * (this.toppings.length + parseInt(this.size));
   return (cost + " " + "bucks"); 
 }
+
+
 
 // UI LOGIC
 
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
-    let pizza = new Pizza(parseInt($("#size").val()), parseInt($("#cheese").val()), parseInt($("#meats").val()), parseInt($("#veggies").val()), parseInt($("#other").val()));
+    let pizza = new Pizza($("#size").val());
+    pizza.toppings = ["<li>" + $("#cheese").val() + "</li>" + "<li>" + $("#meats").val() + "</li>" + "<li>" + $("#veggies").val() + "</li>" + "<li>" + $("#other").val() + "</li>"];
     $("#result").html("<h2>" + pizza.price() + "</h2>");
-  });
-  let pizza = new Pizza(parseInt($("#size").val()), parseInt($("#cheese").val()), parseInt($("#meats").val()), parseInt($("#veggies").val()), parseInt($("#other").val()));
-  $("button#details").click(function(){
-    ShowOrder(pizza);
-  });
+    $("#orderDetails").html("<li>" + pizza.size + "</li>" + pizza.toppings);
+    });
   $("button#start-over").click(function(){
     $("ul#orderDetails").text("");
     $("#result").text("");

@@ -4,7 +4,7 @@
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.5.1.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/new-scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
 <body>
@@ -15,42 +15,42 @@
         <form id="formOne">
           <label for="size">Size</label>
           <select class="form-control" id="size">
-            <option value="1">---</option>
-            <option value="2">Eight Inch</option>
-            <option value="3">Ten Inch</option>
-            <option value="4">Twelve Inch</option>
+            <option value="0">---</option>
+            <option value="8in">Eight Inch</option>
+            <option value="10in">Ten Inch</option>
+            <option value="12in">Twelve Inch</option>
           </select>
           <br>
-          <label for="size">Cheese</label>
+          <label for="cheese">Cheese</label>
           <select class="form-control" id="cheese">
-            <option value="0">---</option>
-            <option value="1">Feta</option>
-            <option value="2">Cheddar</option>
-            <option value="3">Kraft</option>
+            <option value="no cheese">---</option>
+            <option value="Feta">Feta</option>
+            <option value="Cheddar">Cheddar</option>
+            <option value="Kraft">Kraft</option>
           </select>
           <br>
-          <label for="size">Meats</label>
+          <label for="meats">Meats</label>
           <select class="form-control" id="meats">
-            <option value="0">---</option>
-            <option value="1">Pepperoni</option>
-            <option value="2">Ham</option>
-            <option value="3">Bacon</option>
+            <option value="no meat">---</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Ham">Ham</option>
+            <option value="Bacon">Bacon</option>
           </select>
           <br>
-          <label for="size">Veggies</label>
+          <label for="veggies">Veggies</label>
           <select class="form-control" id="veggies">
-            <option value="0">---</option>
-            <option value="1">Olives</option>
-            <option value="2">Onions</option>
-            <option value="3">Mushroom</option>
+            <option value="no veggies">---</option>
+            <option value="Olives">Olives</option>
+            <option value="Onions">Onions</option>
+            <option value="Mushrooms">Mushroom</option>
           </select>
           <br>
-          <label for="size">Other</label>
+          <label for="other">Other</label>
           <select class="form-control" id="other">
-            <option value="0">---</option>
-            <option value="1">Truffle Oil</option>
-            <option value="2">Mac n' Cheese</option>
-            <option value="3">Oreos</option>
+            <option value="nothing else">---</option>
+            <option value="Truffle Oil">Truffle Oil</option>
+            <option value="Mac 'n Cheese">Mac n' Cheese</option>
+            <option value="Oreos">Oreos</option>
           </select>
           <br>
           <button id="enterOrder" type="submit" class="btn btn-info">Submit My Pizza</button>
@@ -60,11 +60,11 @@
       <div class="col-md-6">
         <div id="result">
         </div>
-        <div>
+        <div id="pSize">
           <ul id="orderDetails">
 
           </ul>
-          <button class="btn btn-info" id="details">Show Order Details</button>
+          <button class="btn btn-info" id="addPizza">Add Another Pizzas</button>
         </div>
       </div>
     </div>
