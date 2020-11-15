@@ -43,8 +43,8 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
     <th>Expect</th>
   </tr>
   <td></td>
-    <td>User input from form fields is converted to numbers and passed to consctructor to build pizza object</td>
-    <td>Input:(12in, olives, redsauce).toOutput(Pizza= {1, 2, 2)</td>
+    <td>User input from form field for size is converted to a number and passed to consctructor to build pizza object</td>
+    <td>Input:(12in, olives, redsauce).toOutput(Pizza= {1})</td>
   </tr> 
   <tr>
     <th>Describe: function Pizza ()</th>
@@ -52,28 +52,9 @@ This webpage will give users a choice of pizza sizes and toppings to choose from
     <th>Expect</th>
   </tr>
     <td></td>
-    <td>Should take number values of pizza object properties, and sum the topping numbers then multiply by the size number</td>
-    <td>input: pizzaObject(2, 3, 1, 2, 2).toOutput(16)</td>   
+    <td>Should take number values of pizza object properties including number of  toppings and size to calculate price</td>
+    <td>input: pizzaObject(2, toppings[1, 2, 3, 4]).toOutput(12)</td>   
   <tr>
-    <th>Describe: function orderDetails...()</th>
-    <th>Test</th>
-    <th>Expect</th>
-  </tr>  
-  <tr>
-    <td></td>
-    <td>Should take the number value from the user input and display replace the number with a string matching the user choices.</td>
-    <td>pizzaObject = {1, 2, 3}.toOutPut(pizza = {feta, 2, 3})</td>
-  </tr>
-  <tr>
-    <th>Describe: function ShowOrder(pizza)</th> 
-    <th>Test</th>
-    <th>Expect</th>
-  </tr>  
-  <tr>
-    <td></td>
-    <td>Should show the converted values from orderDetails function on html page as an unordered list.</td>
-    <td>pizzaObject = {feta, onion, pepperoni}.toOutPut(*feta*onion*pepperoni)</td>
-  </tr>
 </table>
 <br>
 
